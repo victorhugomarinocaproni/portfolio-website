@@ -1,0 +1,263 @@
+:root {
+    --white: #fff;
+    --main-bg: #051229;
+    --light-gray: #c7c0c0;
+    --darker-gray: #434141;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+/* Cellphones (Small Devices) */
+@media only screen and (min-width: 320px) and (max-width: 768px){
+
+    .nav-bar {
+        background-color: var(--main-bg);
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        align-items: center;
+        border-bottom: 0.1rem solid var(--white);
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        color: var(--white);
+    }
+
+    .menu {
+        display: flex;
+        gap: 1.2rem;
+        font-size: 1.2rem;
+        
+    }
+
+    .menu li a {
+        color: var(--white);    
+    }
+
+    .section {
+        height: 80vh;
+        width: 100%;
+        background-color: var(--main-bg);
+    }
+
+    .text {
+        color: var(--light-gray);
+        font-size: 1.5rem;
+        margin: 1.8rem 2rem;
+        text-align: justify;
+    }
+
+    .presentation-container {
+        padding-top: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture-container {
+        margin: 0 auto;
+        height: 15rem;
+        width: 15rem;
+        background-color: white;
+        border-radius: 0.8rem;
+    }
+
+    .presentation-title {
+        color: var(--light-gray);
+        margin-top: 5rem;
+        font-size: 1.9rem;
+    }
+
+    .skills-container {
+        padding-top: 10rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-title {
+        font-size: 1.8rem;
+        color: var(--light-gray);
+    }
+
+    .skills-container p {
+        margin-top: 3rem;
+    }
+
+
+
+    .scroller {
+        margin-top: 4.5rem;
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        background-color: var(--darker-gray);
+    }
+
+    .scroller[data-animated=true]{
+        border: 0.1rem solid var(--light-gray);
+        overflow: hidden;
+        mask: linear-gradient(90deg, transparent, var(--light-gray) 15%, var(--light-gray) 85%, transparent);
+    }
+
+    .scroller[data-animated=true] .scroller_inner{
+        flex-wrap: nowrap;
+        animation: scroll 20s linear infinite;
+        width: max-content;
+    }
+
+    .scroller_inner {
+        padding-block: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .logo-item {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    @keyframes scroll {
+        to{
+            transform: translate(calc(-50% - 0.5rem));
+        }
+        
+    }
+
+   
+
+  
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .portfolio-title {
+        font-size: 2rem;
+        color: var(--light-gray);
+    }
+
+    .slide-area {
+        display: flex;
+        margin-top: 5rem;
+        gap: 0.8rem;
+        overflow: hidden;
+    }
+
+    .slider {
+        height: 3rem;
+        width: 3rem;
+        font-size: 2.5rem;
+        background-color: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        margin-top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .project-container {
+        height: 35rem;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0.1rem solid var(--light-gray);
+        border-radius: 1rem;
+        background: #2b2d3e;
+    }
+
+    .project-title {
+        margin-top: 1.8rem;
+        font-size: 2.5rem;
+        color: var(--light-gray);
+        border-bottom: 0.1rem solid var(--light-gray);
+    }
+
+    .project-img {
+        height: 12rem;
+        width: 100%;
+        border: 0.1rem solid black;
+        margin-top: 1rem;
+    }
+
+    .project-desc {
+        font-size: 1.5rem;
+        text-align: justify;
+        margin: 0.8rem;
+        color: var(--light-gray);
+    }
+
+    .project-button {
+        margin-top: 0.5rem;
+        height: 3rem;
+        width: 15rem;
+        border-radius: 0.8rem;
+        text-decoration: none;
+        background: #0dccde;
+    }
+
+    .project-button a {
+        color: #000;   
+    }
+
+
+
+
+}
+
+/* Tablets (Medium Devices)*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+}
+
+/* Laptops (Large Devices)  */
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
+
+}
+
+/* Desktops (Extra-large Devices e.g. Monitors)*/
+@media only screen and (min-width: 1280px){
+
+}
+
+.fab-button-footer {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.fab {
+    height: 4rem;
+    width: 4rem;
+    background-color: gray;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-icon {
+    width: 2rem;
+}
